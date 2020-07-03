@@ -113,8 +113,8 @@ void set_time(){
 }
 void display_time() {
   int h1,rem,m1,s1;
-  h1 = time/3600;
-  rem = time%3600;
+  h1 = time/3600L;
+  rem = time%3600L;
   m1 = rem/60;
   s1 = rem % 60;
   int timearray[]={(h1/10)%10,h1%10,(m1/10)%10,m1%10,(s1/10)%10,s1%10};
