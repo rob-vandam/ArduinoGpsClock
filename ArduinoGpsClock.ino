@@ -40,8 +40,8 @@ bytes, daarom delen door sizeof(int)
   }
 for (int i=0; i < sizeof(controlPins)/sizeof(int);i++){ //lengte array
 is in bytes, daarom delen door sizeof(int)
-    pinMode(pins[i], OUTPUT);
-    digitalWrite(pins[i], LOW);
+    pinMode(controlPins[i], OUTPUT);
+    digitalWrite(controlPins[i], LOW);
   }
 Serial.begin(115200);
 // Start the software serial port at the GPS's default baud
