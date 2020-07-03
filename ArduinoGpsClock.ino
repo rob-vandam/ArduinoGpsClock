@@ -101,7 +101,7 @@ void set_time(){
    else {
     tz=3600;
    }
-   time = (h*3600)+(m*60)+s+tz;
+   time = (h*3600L)+(m*60)+s+tz;
    if (time>=86400){
     time = time - 86400;
    }
