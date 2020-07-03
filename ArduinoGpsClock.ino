@@ -3,7 +3,7 @@
 
 static const int RXPin = A0, TXPin = A1;
 static const uint32_t GPSBaud = 9600;
-unsigned int time = 0;
+long time = 0;
 bool changed = 0;
 bool wintertime;
 int wintermonths[] = {10,11,12,1,2,3};
@@ -112,12 +112,12 @@ void set_time(){
   }
 }
 void display_time() {
-  int h,rem,m,s;
-  h = time/3600;
+  int h1,rem,m1,s1;
+  h1 = time/3600;
   rem = time%3600;
-  m = rem/60;
-  s = rem % 60;
-  int timearray[]={(h/10)%10,h%10,(m/10)%10,m%10,(s/10)%10,s%10};
+  m1 = rem/60;
+  s1 = rem % 60;
+  int timearray[]={(h1/10)%10,h1%10,(m1/10)%10,m1%10,(s1/10)%10,s1%10};
 for (int i=0; i < sizeof(timearray)/sizeof(int);i++){
   digitalWrite(controlPins[i],HIGH);
   numbers(timearray[i]);
