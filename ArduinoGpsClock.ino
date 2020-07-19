@@ -59,8 +59,9 @@ void loop() {
         int d = gps.date.day();
         int y = gps.date.year();
         for (int i=0; i < sizeof(wintermonths)/sizeof(int);i++){
-          if (wintermonths[i]== m){
+          if (wintermonths[i]== mo){
             wintertime = 1;
+            break;
           }
           else{
             wintertime = 0;
