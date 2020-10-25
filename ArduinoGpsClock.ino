@@ -76,7 +76,7 @@ void loop() {
         }
         if (mo == 10) {
           int winterstart = (31 - ((((5*y)/4)+1)%7));
-          if (d<=winterstart){
+          if (d<winterstart){
             wintertime=0;
           }
         }
